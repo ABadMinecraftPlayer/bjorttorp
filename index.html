@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Hotell</a></li>
+            <li><a href="#">Paket</a></li>
+            <li><a href="#">Resturang</a></li>
+            <li><a href="#">Konferens</a></li>
+        </ul>
+        <img src="a.svg">
+        <ul>
+            <li><a href="#">Bröllop & Fest</a></li>
+            <li><a href="#">Golf</a></li>
+            <li><a href="#">Aktiviteter</a></li>
+            <li class="dropdown">Mer
+                <div class="dropdown-content">
+                    <a href="#">Om oss</a>
+                    <a href="#">Historik</a>
+                    <a href="#">Hållbarhet</a>
+                    <a href="#">Blogg</a>
+                    <a href="#">Hitta hit</a>
+                    <a href="#">Kontakt</a>
+                    <a href="#">Bildgalleri</a>
+                    <a href="#">Se & Göra</a>
+                    <a href="#">Swedish / English</a>
+                </div>
+            </li>
+            <li class="dropdown-boka">Boka
+                <div class="dropdown-content-boka">
+                    <a href="#" class="dropdown-card">
+                        <div>
+                            <img src="img/a.avif" alt="Boka paket">
+                        </div>
+                        <p>Boka paket</p>
+                    </a>
+                    <a href="#" class="dropdown-card">
+                        <div>
+                            <img src="img/b.avif" alt="Boka hotellrum">
+                        </div>
+                        <p>Boka hotellrum</p>
+                    </a>
+                    <a href="#" class="dropdown-card">
+                        <div>
+                            <img src="img/c.avif" alt="Konferens & Möten">
+                        </div>
+                        <p>Konferens & Möten</p>
+                    </a>
+                    <a href="#" class="dropdown-card">
+                        <div>
+                            <img src="img/d.avif" alt="Bröllop & Fest">
+                        </div>
+                        <p>Bröllop & Fest</p>
+                    </a>
+                    <a href="#" class="dropdown-card">
+                        <div>
+                            <img src="img/e.avif" alt="Boka bord">
+                        </div>
+                        <p>Boka bord</p>
+                    </a>
+                    <a href="#" class="dropdown-card">
+                        <div>
+                            <img src="img/f.avif" alt="Köp presentkort">
+                        </div>
+                        <p>Köp presentkort</p>
+                    </a>
+                    <a href="#" class="dropdown-card">
+                        <div>
+                            <img src="img/g.avif" alt="Lös in presentkort">
+                        </div>
+                        <p>Lös in presentkort</p>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <div>
+            <h1>Julens smakresa på Bjertorp Slott</h1>
+            <img src="img/linje.png" alt="dekorativ linje">
+            <p>En kulinarisk upplevelse i sex serveringar, där julens smaker och dofter ledsagar er genom slottets
+                stämningsfulla salar. Välkomstglögg, viltbuffé och gottebord, varsamt komponerat av stjärnkocken
+                Christopher Lai. En gastronomisk högtid i sann slottsanda.</p>
+            <a href="#">Boka Julens Smakresa</a>
+        </div>
+    </div>
+    <div id="booking-bar">
+        <div id="tripadvisor"></div>
+        <div id="forms">
+            <div class="forms-child">
+                <p>Ankomstdatum</p>
+                <form>
+                    <input type="date">
+                </form>
+            </div>
+            <div class="forms-child">
+                <p>Antal boende och gäster</p>
+                <form>
+                    <input type="placeholder" placeholder="Antal nätter">
+                </form>
+            </div>
+            <div class="forms-child">
+                <form>
+                    <input type="submit" value="Sök">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="event-section">
+        <h1>
+            Eventkalender
+        </h1>
+        <img src="img/linje-svart.png" alt="dekorativ linje" width="200px">
+        <p>
+            Vi gillar god mat, musik, historia, lokala upplevelser och en levande landsbygd. Därför anordnar vi ofta
+            något extra, något utöver det härliga vanliga. Här ser du vad som händer på slottet härnäst.
+        </p>
+        <div id="filters">
+            <button>Högtid</button>
+            <button>Event</button>
+            <button>Mat & Dryck</button>
+            <a href="#">Ta bort filter</a>
+        </div>
+        <div id="event-cards">
+            <div class="event-card">
+                <img src="img/julenssmakresa.avif" alt="Eventbild">
+                <div class="text-ecard">
+                    <h2>Julens Smakresa</h2>
+                    <p>Dec 15, 2024</p>
+                    <p>Koppla bort och njut av en stämningsfull jul på Bjertorp slott. Serverad julmeny och julmusik
+                        väntar i vår stämningsfulla slottsmiljö.</p>
+                    <a href="#">Läs mer</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="img/lucia-morgon.jpg" alt="Eventbild">
+                <div class="text-ecard">
+                    <h2>Luciamorgon</h2>
+                    <p>Dec 31, 2024</p>
+                    <p>Det blir ännu en magisk luciamorgon på slottet. Välkommen på en stämningsfull frukost till
+                        tonerna av
+                        skön sång.</p>
+                    <a href="#">Läs mer</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="img/nyår.avif" alt="Eventbild">
+                <div class="text-ecard">
+                    <h2>Nyår</h2>
+                    <p>Jan 10, 2025</p>
+                    <p>Ett sagolikt nyår på slottet i dagarna tre - god mat, vackra historiska miljöer, livemusik &
+                        fyrverkerier i slottsparken.</p>
+                    <a href="#">Läs mer</a>
+                </div>
+            </div>
+</body>
+
+</html>

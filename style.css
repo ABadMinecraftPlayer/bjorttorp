@@ -1,0 +1,384 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: darkblue;
+    font-family: "Marcellus", serif;
+    padding-bottom: 80px;
+}
+
+body>nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    height: 90px;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav>img {
+    width: 54px;
+    margin: 0 36px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    width: 600px;
+    height: 100%;
+    align-items: center;
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
+}
+
+li {
+    padding: 12px 16px;
+    font-size: 18px;
+}
+
+nav ul:first-child {
+    justify-content: end;
+}
+
+.dropdown {
+    padding: 38.5px 16px;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown::after {
+    font-family: FontAwesome;
+    content: "\f107";
+    padding-left: 4px;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: white;
+    padding: 12px;
+    top: 85%;
+    right: 0;
+    width: 160px;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 0.5px solid #f8f8f8;
+    gap: 5px;
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content a {
+    padding: 12px 8px;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffe9b87a;
+    border-radius: 6px;
+}
+
+.dropdown-boka {
+    padding: 34px 16px;
+    background-color: #364b44;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-boka:hover .dropdown-content-boka {
+    display: grid;
+    cursor: default;
+}
+
+.dropdown-content-boka {
+    position: absolute;
+    display: none;
+    flex-wrap: wrap;
+    grid-gap: 15px 30px;
+    width: 80vw;
+    padding: 32px;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    background-color: white;
+    grid-template-columns: repeat(4, 1fr);
+    border: 25px solid rgba(255, 0, 0, 0);
+    background-clip: padding-box;
+    z-index: 9999;
+}
+
+.dropdown-card div {
+    height: 240px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-card img {
+    display: block;
+    object-fit: cover;
+    filter: brightness(80%);
+    height: 100%;
+    width: 100%;
+    transition: 300ms;
+}
+
+.dropdown-card img:hover {
+    scale: 1.1;
+    filter: brightness(100%);
+
+}
+
+.dropdown-card>p {
+    font-size: 24px;
+    padding: 14px 8px;
+    margin-top: 8px;
+    border-radius: 15%;
+    transition: 300ms;
+}
+
+.dropdown-card>p:hover {
+    border-radius: 5px;
+    background-color: #c8ab7854;
+}
+
+.hero {
+    height: 80vh;
+    width: 100%;
+    background-image: url("img/hero.avif");
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: 115%;
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-iteration-count: 1;
+}
+
+.hero div {
+    display: flex;
+    width: 40vw;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.hero h1 {
+    font-weight: 100;
+    font-size: 60px;
+    line-height: 1;
+    width: 30vw;
+}
+
+.hero img {
+    width: 220px;
+}
+
+.hero a {
+    padding: 12px 24px;
+    background-color: #364b44;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.hero a:hover {
+    background-color: #715a50;
+    scale: 0.98;
+    transition: 300ms;
+}
+
+@keyframes scroll {
+    to {
+        background-size: calc(115% + 800px);
+    }
+}
+
+#booking-bar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    gap: 20vw;
+    height: 80px;
+    padding: 18px 14px;
+    bottom: 0;
+    justify-content: space-between;
+    z-index: 9999;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#forms {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+
+.forms-child {
+    font-size: 14px;
+}
+
+.forms-child p {
+    padding-bottom: 10px;
+}
+
+.forms-child input {
+    width: 450px;
+    height: 36px;
+}
+
+.forms-child:last-child input {
+    width: 200px;
+    background-color: #364b44;
+    color: white;
+    height: 40px;
+    border: rgba(0, 0, 0, 0.5) 1px solid;
+    border-radius: 4px;
+}
+
+.forms-child:last-child input:hover {
+    filter: brightness(120%);
+    cursor: pointer;
+}
+
+
+#tripadvisor {
+    background-image: url("img/6745e3e5ed2e98807a209d1f_TC_green_winner-gif_LL_2024.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 20px;
+    height: 70px;
+    width: 70px;
+}
+
+#event-section {
+    background-color: #e9dfcf;
+    color: black;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+#event-section h1 {
+    font-size: 72px;
+    font-weight: 100;
+}
+
+#event-section>p {
+    width: 45vw;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#filters {
+    display: flex;
+    align-items: center;
+}
+
+#filters button {
+    background-color: white;
+    border: 1px;
+    padding: 10px 26px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 6px;
+    border-radius: 4px;
+    height: 45px;
+}
+
+#filters a {
+    text-decoration: underline;
+    margin-left: 12px;
+}
+
+#event-cards {
+    gap: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.event-card {
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    width: 22vw;
+    height: 500px
+}
+
+.event-card img {
+    width: 100%;
+    border: none;
+    border-radius: 4px 4px 0 0;
+}
+
+.text-ecard {
+    padding: 20px;
+    border: 1px solid #e0d7c7;
+    height: 100%;
+    margin: 20px;
+    font-size: 14px;
+    text-wrap: wrap;
+}
+
+.event-card a {
+    text-decoration: underline;
+    font-size: 16px;
+    position: absolute;
+    bottom: 45px;
+}
+
+.event-card p {
+    padding: 5px 0;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .dropdown-content-boka {
+        grid-template-columns: repeat(2, 1fr);
+        overflow-y: auto;
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-width: 1137px) {
+    nav>ul>li:not(.dropdown-boka) {
+        display: none;
+
+    }
+
+    nav>ul {
+        justify-content: end;
+        margin-right:40px;
+    }
+}
